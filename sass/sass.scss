@@ -1,0 +1,121 @@
+@use"_reset.scss";
+@use"_font.scss";
+@use"_object.scss";
+@mixin flex($items,$justify){
+     display: flex;
+     align-items: $items;
+     justify-content: $justify;
+
+}
+$color: rgba(24, 29, 75, 0.596);
+body{
+     background-image: url(../images/rm373batch4-12.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     text-transform: capitalize;
+
+
+}
+main {
+     .hero{
+          header{
+               width: 100%;
+               height: 12vh;
+               
+               nav{
+                    width: 100%;
+                    height: 10vh;
+                    background-color: rgba(24, 29, 75, 0.596);
+                    @include flex(center,space-between ); 
+                    flex-direction: row-reverse;
+
+                         ul{
+                              width:100%;
+                              height: 10vh;
+                              @include flex(center,center );
+                              flex-direction: row-reverse;
+                              
+                              gap: 25px;
+                              li{
+                                   a{
+                                        width: 40px;
+                                        height: 7vh;
+                                        color: white;
+                                        text-decoration: none;
+                                        font-family: bold;
+                                        font-size: 18px;
+                                        font-weight: 400;
+                                        button{
+                                             width: 100px;
+                                             height: 38px;
+                                             font-family: bold;
+                                             font-size: 16px;
+                                             font-weight: 400;
+                                             color: white;
+                                             background-color:rgba(45, 49, 80, 0.829) ;
+                                             border-radius: 10px;
+                                        }
+
+
+                                   }
+                              }
+                         }
+                       
+               }
+          }
+
+     }
+     .content{
+          width: 100%;
+          height: 70vh;
+          
+          @include flex(center,space-around );
+          gap:  160px;
+          .p{
+               width: 40%;
+               height: 40vh;
+               
+               p{
+                    font-family: bold;
+                    color: white;
+                    font-size: 40px;
+                    font-weight: 500;
+                    line-height: 50px;
+                    word-spacing: 16px;
+                    margin-top: 10px;
+               }
+          }
+          .boxs{
+               width: 25%;
+               height: 70vh;
+               @include flex(center,center );
+               flex-direction: column;
+               gap: 9px;
+               .box{
+                    width: 78%;
+                    height: 24vh;
+                    background-color: rgb(20, 58, 107);
+                    border-radius: 30px;
+                    @include flex(center,center);
+                    gap: 30px;
+                    font-family: medium;
+                    font-size: 17px;
+                    border: 2px solid rgba(24, 29, 75, 0.596);
+                    button{
+                         width: 105px;
+                         height: 47px;
+                         background-color: cadetblue;
+                         border-radius: 15px;
+                         font-family: bold;
+                         font-size: 18px;
+                    }
+               }
+               .box:nth-child(2){
+                    background-color: rgb(63, 150, 70);
+               }
+
+          }
+
+
+     }
+}

@@ -8,7 +8,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass sass/sass.scss style/style.css"
+    "start": "sass sass/sass.scss style/style.css --watch"
   },
   "keywords": [],
   "author": "",
